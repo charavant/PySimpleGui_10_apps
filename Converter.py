@@ -15,7 +15,7 @@ layout = [
 window = sg.Window('Converter', layout)
 
 while True:
-    event, values = window.read()
+    event, values = window.read()  # type: ignore
     
     if event == sg.WIN_CLOSED:
         break
@@ -33,8 +33,8 @@ while True:
                   output = round(float(input_value) / 60,2)
                   output_string = f'{input_value} secs are {output} mins.'
             
-            window['-OUTPUT-'].update(output_string)  
+            window['-OUTPUT-'].update(output_string)    # type: ignore
         else:
-            window['-OUTPUT-'].update('Please enter a number')  
+            window['-OUTPUT-'].update('Please enter a number')    # type: ignore
 
 window.close()
