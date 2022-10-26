@@ -14,10 +14,10 @@ def create_window(theme):
                  key = '-TEXT-')
          ],
         [sg.Button('Clear', expand_x= True),sg.Button('Enter', expand_x= True)],
-        [sg.Button(7, size=button_size),sg.Button(8, size=button_size),sg.Button(9, size=button_size),sg.Button('*', size=button_size)],
-        [sg.Button(4, size=button_size),sg.Button(5, size=button_size),sg.Button(6, size=button_size),sg.Button('/', size=button_size)],
-        [sg.Button(1, size=button_size),sg.Button(2, size=button_size),sg.Button(3, size=button_size),sg.Button('-', size=button_size)],
-        [sg.Button(0, expand_x= True),sg.Button('.', size=button_size),sg.Button('+', size=button_size)]
+        [sg.Button(7, size=button_size),sg.Button(8, size=button_size),sg.Button(9, size=button_size),sg.Button('*', size=button_size)],  # type: ignore
+        [sg.Button(4, size=button_size),sg.Button(5, size=button_size),sg.Button(6, size=button_size),sg.Button('/', size=button_size)],  # type: ignore
+        [sg.Button(1, size=button_size),sg.Button(2, size=button_size),sg.Button(3, size=button_size),sg.Button('-', size=button_size)],  # type: ignore
+        [sg.Button(0, expand_x= True),sg.Button('.', size=button_size),sg.Button('+', size=button_size)]  # type: ignore
     ]
     return sg.Window('Calculator', layout)
 
