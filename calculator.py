@@ -38,13 +38,13 @@ while True:
     if event in ['0','1','2','3','4','5','6','7','8','9']:
         current_num.append(event)
         num_string = ''.join(current_num)
-        window['-TEXT-'].Update(num_string)
+        window['-TEXT-'].Update(num_string)  # type: ignore
     
     if event in ['+','-','/','*']:
         full_operation.append(''.join(current_num))
         current_num = []
         full_operation.append(event)
-        window['-TEXT-'].Update('')
+        window['-TEXT-'].Update('')  # type: ignore
         
     if event == 'Enter':
         full_operation.append(''.join(current_num))
@@ -55,6 +55,6 @@ while True:
     if event == 'Clear':
         current_num = []
         full_operation = []
-        window['-TEXT-'].Update('')
+        window['-TEXT-'].Update('')  # type: ignore
         
 window.close()
