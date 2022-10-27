@@ -24,7 +24,7 @@ start_time = 0
 active = False
 
 while True:
-    event, values = window.read()   # type: ignore
+    event, values = window.read(timeout=10)   # type: ignore
     if event in (sg.WIN_CLOSED, '-CLOSE-'):
         break
     
