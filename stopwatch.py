@@ -2,7 +2,7 @@ import PySimpleGUI as sg
 
 sg.theme('black')
 layout = [
-    [sg.('x.png')],
+    [sg.Text('X')],
     [sg.VPush()],
     [sg.Text('time')],
     [sg.Button('Start'), sg.Button('Lap')],
