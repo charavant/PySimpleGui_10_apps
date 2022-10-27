@@ -2,7 +2,7 @@ import PySimpleGUI as sg
 
 sg.theme('black')
 layout = [
-    [sg.Text('X')],
+    [sg.Push(),sg.Text('X', pad = 0, key='-CLOSE-', enable_events=True)],
     [sg.VPush()],
     [sg.Text('time')],
     [sg.Button('Start'), sg.Button('Lap')],
@@ -18,8 +18,11 @@ window = sg.Window(
 )
 
 while True:
-    event, values = window.read() 
-    if event in (sg.WIN_CLOSED, 'Start'):
+    event, values = window.read()   # type: ignore
+    if event in (sg.WIN_CLOSED, '-CLOSE-'):
         break
     
+    
 window.close()
+
+
