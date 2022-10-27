@@ -2,7 +2,7 @@ import PySimpleGUI as sg
 
 sg.theme('black')
 layout = [
-    [sg.Image()],
+    [sg.('x.png')],
     [sg.VPush()],
     [sg.Text('time')],
     [sg.Button('Start'), sg.Button('Lap')],
@@ -18,7 +18,7 @@ window = sg.Window(
 )
 
 while True:
-    event, values = window.read()
+    event, values = window.read() 
     if event in (sg.WIN_CLOSED, 'Start'):
         break
     
